@@ -1,4 +1,4 @@
-export interface firePokemonsModel {
+export interface waterPokemonsModel {
     pokemon: {
         name: string,
         url: string

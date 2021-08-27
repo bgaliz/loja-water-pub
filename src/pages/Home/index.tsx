@@ -10,7 +10,7 @@ import api from '../../services/api';
 import {useCart, PokemonProps} from '../../hooks/cart.provider';
 import { handleUpperCaseFirstCaracter, returnPrice } from '../../helper';
 
-import {PokemonResponseModel, firePokemonsModel} from '../../shared/models/pokemon';
+import {PokemonResponseModel, waterPokemonsModel} from '../../shared/models/pokemon';
 import { useCallback } from 'react';
 import { useState } from 'react';
 import { arrayMoveImmutable } from 'array-move';
@@ -26,8 +26,8 @@ const Home: React.FC = () => {
         const inicio = async () => {
             const allUrlPokemons = await api.get('type/water')
            
-            allUrlPokemons.data.pokemon.map(async (firePokemon: firePokemonsModel) => {               
-                await api.get(`https://pokeapi.co/api/v2/pokemon/${firePokemon.pokemon.name}`)
+            allUrlPokemons.data.pokemon.map(async (waterPokemon: waterPokemonsModel) => {               
+                await api.get(`https://pokeapi.co/api/v2/pokemon/${waterPokemon.pokemon.name}`)
                 .then(pokemon => {
                     const image = pokemon.data.sprites.other.dream_world.front_default 
                         ? pokemon.data.sprites.other.dream_world.front_default 
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                         id: pokemon.data.id,
                         name: pokemon.data.name,
                         weight: pokemon.data.height,
-                        attribute: 'Fire',
+                        attribute: 'water',
                         status: pokemon.data.stats, 
                         image,
                         base_experience: pokemon.data.base_experience,
