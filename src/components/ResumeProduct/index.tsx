@@ -5,9 +5,14 @@ import './styles.css'
 import {FaMinusCircle, FaPlusCircle} from 'react-icons/fa';
 
 import { useCart } from '../../hooks/cart.provider';
+import { useEffect } from 'react';
 
 const ResumeProduct: React.FC = () => {
-    const { cart } = useCart();
+    const { cart, handleRemoverOneSingleProduct } = useCart();
+
+    useEffect(() => {
+
+    },[cart?.products])
 
     return (
         <div className="container-resume-products" >
@@ -19,7 +24,7 @@ const ResumeProduct: React.FC = () => {
                             <span>{x.pokemon?.name}</span>
                         </div>
                         <div className="add-remove-cart">
-                            <FaMinusCircle className="remove" />
+                            <FaMinusCircle className="remove" onClick={() => handleRemoverOneSingleProduct(x)}/>
                             <span>{x.qttd}</span>
                             <FaPlusCircle className="add"/>
                         </div>

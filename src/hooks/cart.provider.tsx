@@ -41,6 +41,7 @@ interface ContextProps {
     handleAddCart(produto: CartProps): void;
     handleInicializePokemons(pokemons: PokemonProps): void;
     setPokemons: React.Dispatch<React.SetStateAction<PokemonProps[]>>
+    handleRemoverOneSingleProduct: (value: CartProps) => void
 }
 
 const CartContext = createContext({} as ContextProps);
@@ -85,6 +86,15 @@ const CartProvider: React.FC = ( {children} ) => {
       cart.products = [];
     }
 
+    const handleRemoverOneSingleProduct = (value:CartProps) => {
+      cart.products.map((x,index) => {
+        if(x.id === value.id){
+          console.log('removido: ',value);
+          cart.products.splice(index, 1);
+        }
+      })
+    }
+
     return (
         <CartContext.Provider
           value={{
@@ -93,7 +103,8 @@ const CartProvider: React.FC = ( {children} ) => {
             pokemons,
             handleAddCart,
             setPokemons,
-            handleRemoveProduct
+            handleRemoveProduct,
+            handleRemoverOneSingleProduct
           }}
         >
           {children}

@@ -6,7 +6,7 @@ import CartItemAdded from '../CartItemAdded';
 import Divider from '../Divider';
 import Button from '../Button';
 import { Link, useLocation } from 'react-router-dom';
-import { PokemonProps } from '../../hooks/cart.provider';
+import { PokemonProps, useCart } from '../../hooks/cart.provider';
 import Modal from '../Modal';
 
 interface CartContainerProps {
@@ -16,6 +16,7 @@ interface CartContainerProps {
 const CartContainer: React.FC<CartContainerProps> = ({
     endShopping
 }:CartContainerProps) => {
+    const { cart } = useCart()
     const [openModal, setOpenModal] = useState(false);
 
     function handleOpenModal() {
@@ -39,7 +40,7 @@ const CartContainer: React.FC<CartContainerProps> = ({
             <Divider />
             <div className="full-price">
                 <span>Total</span>
-                <span>valor Total</span>
+                <span>R${cart?.total}</span>
             </div>
             {
                 endShopping

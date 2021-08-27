@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 
     useEffect(() => {
         const inicio = async () => {
-            const allUrlPokemons = await api.get('type/fire')
+            const allUrlPokemons = await api.get('type/water')
            
             allUrlPokemons.data.pokemon.map(async (firePokemon: firePokemonsModel) => {               
                 await api.get(`https://pokeapi.co/api/v2/pokemon/${firePokemon.pokemon.name}`)
