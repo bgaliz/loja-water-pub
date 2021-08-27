@@ -1,0 +1,15 @@
+.table-names {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    padding-bottom: 11px;
+    margin-bottom: 11px;
+    border-bottom: 1px solid var(--medium);
+}
+.table-names span {
+    font-size: 14px;
+    font-family: Signika, sans-serif;
+}
+.table-names span:first-child{
+    width: 100px;
+}

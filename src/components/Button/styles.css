@@ -1,0 +1,82 @@
+.container-button {
+    margin: 10px 0;
+}
+.button {
+    width: 100%;
+    height: 40px;
+    
+    display: block;
+
+    border: none;
+    border-radius: 50px;
+    background: #DB482F;
+    color: var(--white);
+    
+    filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.25));
+    
+    font-size: 16px;
+    padding: 0 25px;
+}
+
+.button.success {
+    background-color: var(--success);
+}
+.button.warning {
+    background-color: var(--warning);
+}
+.button.danger {
+    background-color: var(--danger);
+}
+.button.outline {
+    background-color: transparent;
+
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    filter: none;
+
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.disabled > .button:disabled {
+    pointer-events: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    box-shadow: none;
+    opacity: .85;
+}
+
+.button .icon,
+.lock-icon-button,
+.cart-icon-button {
+    display: none;
+}
+
+.button.withIcon .cart-icon-button{
+    display: none;
+}
+.button.withBuyIcon .lock-icon-button{
+    display: none;
+}
+
+.button.withIcon .icon, 
+.lock-icon-button,
+.button.withBuyIcon .icon, 
+.cart-icon-button {
+    display: block;
+}
+
+.lock-icon-button, .cart-icon-button {
+    position: absolute;
+    left: 7%;
+    transform: translateY(50%);
+    bottom: 50%;
+}

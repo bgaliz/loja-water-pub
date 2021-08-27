@@ -1,0 +1,65 @@
+.poke-resume-container {
+    width: 100%;
+    height: 350px;
+    min-width: 400px;
+    max-width: 400px;
+
+    background: var(--white);
+    border-radius: 30px;
+
+    padding: 33px;
+    margin: 15px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.poke-resume-container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+
+    color: var(--text);
+}
+
+.container-shop-requests {
+    max-height: 170px;
+    overflow: auto;
+    will-change: transform;
+}
+
+.container-shop-requests::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 30px;
+    color: var(--medium);
+    scrollbar-color: var(--medium);
+}
+.container-shop-requests::-webkit-scrollbar-track{
+    scrollbar-color: var(--medium);
+}
+
+.full-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 10px;
+}
+.full-price span:first-child {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 400;
+    font-family: Signika, sans-serif;
+}
+.full-price span:last-child {
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--primary-shade);
+}
+
+@media screen and (max-width: 1223px) {
+    .poke-resume-container {
+        max-width: 100%;
+        min-width: min-content;
+    }
+}

@@ -1,0 +1,50 @@
+:root {
+  --primary: #DB482F;
+  --primary-shade: #832F1F;
+  --primary-tint: #E99585;
+
+  --success: #23EB9D;
+  --warning: #E0CE22;
+  --danger: #FF0000;
+
+  --medium: #C4C6CA;
+  --medium-tint: #DCDDDF;
+  --medium-shade: #767779;
+  
+  --text: #2b2b2b;
+  --text-header: #F0E1DA;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAF1ED;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+
+  font-size: 100%/1.4;
+}
+
+body, input, button {
+  font-family: Poppins, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Signika, sans-serif;
+  color: var(--primary-shade);
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}

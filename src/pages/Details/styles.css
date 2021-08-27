@@ -1,0 +1,46 @@
+main {
+    height: 100%;
+
+    padding: 45px 35px 35px 35px;
+}
+
+.poke-information {
+    width: 60%;
+    display: inline-block;
+
+    
+}
+.poke-information h2 {
+    font-size: 2.5rem;
+
+    font-family: 'Press Start 2P', sans-serif;
+}
+.poke-information .image {
+    width: 100%;
+
+    margin: 35px 0;
+
+    text-align: center;
+}
+.poke-information .image img{
+    width: 258px;
+    height: 261px;
+}
+.poke-information .details {
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin: 20px 0;
+}
+
+.poke-resume {
+    width: 40%;
+    display: block;
+    float: right;
+}
+
+@media screen and (max-width: 1223px) {
+    .poke-information {
+        width: 100%;
+    }
+}

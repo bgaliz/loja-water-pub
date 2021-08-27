@@ -1,0 +1,23 @@
+.container {
+    height: 100vh;
+    /* padding: 0 35px; */
+}
+
+.container-main {
+    display: inline-block;
+    
+    width: calc(100% - 400px);
+}
+
+.container-carthome {
+    width: 400px;
+    float: right;
+    height: auto;
+
+    display: block;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    background: var(--white);
+}

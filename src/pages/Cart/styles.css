@@ -1,0 +1,14 @@
+.container-cart-details {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width: 1223px) {
+    .container-cart-details,
+    .poke-resume {
+        width: 100%;
+    }
+}

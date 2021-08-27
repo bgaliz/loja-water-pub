@@ -1,0 +1,40 @@
+.container-cart-item-added{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 0;
+}
+.container-cart-item-added.hasBorder{
+    border-bottom: 1px solid var(--medium);
+}
+.container-cart-item-added p {
+    width: 100%;
+    margin-left: 15px;
+
+    font-family: Signika, sans-serif;
+}
+.container-cart-item-added span {
+    color: var(--primary-shade);
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+
+    font-size: 1.25rem;
+}
+
+.button-remove-product,
+.button-remove-product .hasButton {
+    display: flex;
+}
+
+.button-remove-product svg {
+    display: none;
+}
+
+.button-remove-product:hover {
+    cursor: pointer;
+}
+
+.button-remove-product svg {
+    fill: var(--danger);
+}

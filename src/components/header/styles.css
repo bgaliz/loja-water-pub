@@ -1,0 +1,34 @@
+.container-header {
+    width: 100%;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--primary);
+    color: var(--text-header);
+
+    padding: 0 35px;
+}
+
+.logo {
+    width: 100%;
+    text-align: left;
+
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 18px;
+
+    color: var(--text-header);
+}
+
+.fire_icon {
+    width: 100%;
+    text-align: left;
+}
+
+.shoppingcart_icon {
+    width: 100%;
+
+    text-align: right;
+}
